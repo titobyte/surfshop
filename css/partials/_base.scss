@@ -1,0 +1,21 @@
+//Global variables
+$font-stack-header: 'Abril Fatface', Cursive;
+$font-stack-body:  'Poppings', sans-serif;
+$font-stack-logo: 'Amatic SC', cursive;
+$primary-color: #333;
+
+h1,
+h2,
+ {
+  font-family: $font-stack-header;
+  color: $primary-color;
+}
+h2 {
+  font-size: 2em;
+}
+p{
+  font-family: $font-stack-body;
+  font-size: 1.1rem;  
+  color: $primary-color;
+}
+

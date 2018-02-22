@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins:300|" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700" rel="stylesheet">
+    <!--Regular css -->
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Javascript Parser</title>
+  </head>
+  <body>
+    <input type="text" id="txtTest">
+
+  <script>
+//Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word of the string in upper case.
+
+// Get a reference to the input and wire it up to an input event handler that
+// calls the fixer function
+document.getElementById("txtTest").addEventListener("input", forceLower);
+
+// Event handling functions are automatically passed a reference to the
+// event that triggered them as the first argument (evt)
+function forceLower(evt) {
+  // Get an array of all the words
+  var words = evt.target.value.split(/\s+/g);
+  
+  // Loop through the array and replace the first letter with a cap
+  var newWords = words.map(function(element){
+    // Make sure all letters become lower case
+    element = element.toLowerCase();
+    
+    // As long as we're not dealing with an empty array element, return the first letter
+    // of the word, converted to upper case and add the rest of the letters from this word.
+    // Return the final word to a new array
+    return element !== "" ?  element[0].toUpperCase() + element.substr(1, element.length) : "";
+  });
+  
+ // Replace the original value with the updated array of capitalized words.
+ evt.target.value = newWords.join(" "); 
+
+}  // Certain minor words should be left lowercase unless 
+  // they are the first or last words in the string
+  lowers = ['A', 'An', 'The', 'And', 'But', 'Or', 'For', 'Nor', 'As', 'At', 
+  'By', 'For', 'From', 'In', 'Into', 'Near', 'Of', 'On', 'Onto', 'To', 'With'];
+  for (i = 0, j = lowers.length; i < j; i++)
+     str = str.replace(new RegExp('\\s' + lowers[i] + '\\s', 'g'),
+      function(txt) {
+        return txt.toLowerCase();
+      });
+  </script>
+</html>

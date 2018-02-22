@@ -1,0 +1,19 @@
+.jumbotron{
+  background-image: url('img/store-hero.png');
+ background-size: cover;
+ background-repeat: no-repeat;
+}
+
+.company-font{
+  font-family: $font-stack-logo;
+  font-size: 3rem;
+}
+.shop-logo{
+  padding-bottom: 15px;
+}
+.footer-helper{
+  padding-top: 25px;
+}
+.item-detail__card {
+  padding: 50px;
+}

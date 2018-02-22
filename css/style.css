@@ -1,0 +1,32 @@
+h1,
+h2 {
+  font-family: "Abril Fatface", Cursive;
+  color: #333; }
+
+h2 {
+  font-size: 2em; }
+
+p {
+  font-family: "Poppings", sans-serif;
+  font-size: 1.1rem;
+  color: #333; }
+
+.jumbotron {
+  background-image: url("img/store-hero.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.company-font {
+  font-family: "Amatic SC", cursive;
+  font-size: 3rem; }
+
+.shop-logo {
+  padding-bottom: 15px; }
+
+.footer-helper {
+  padding-top: 25px; }
+
+.item-detail__card {
+  padding: 50px; }
+
+/*# sourceMappingURL=style.css.map */
